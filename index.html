@@ -258,31 +258,35 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Vision-Language-Action (VLA) models inherit strong priors from 
+            pretrained Vision-Language Models (VLMs), but naïve 
+            fine-tuning often disrupts these representations 
+            and harms generalization. 
+            Existing fixes -- freezing modules or applying 
+            uniform regularization -- either overconstrain 
+            adaptation or ignore the differing roles of 
+            VLA components.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We present <span class="dnerf">MAPS</span> (Module-Wise Proximity Scheduling), 
+            the first robust fine-tuning framework for VLAs. 
+            Through systematic analysis, we uncover an empirical 
+            order in which proximity constraints should be relaxed to 
+            balance stability and flexibility. 
+            MAPS linearly schedules this relaxation, enabling visual 
+            encoders to stay close to their pretrained priors 
+            while action-oriented language layers adapt more freely. 
+            MAPS is parameter-free, data-free, and plug-and-play 
+            with existing architectures.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Across MiniVLA-VQ, MiniVLA-OFT, OpenVLA-OFT, 
+            and benchmarks like LIBERO, CALVIN, and SimplerEnv, 
+            MAPS boosts both in- and out-of-distribution 
+            performance (up to +25\%). 
+            Our findings highlight empirically guided 
+            proximity to pretrained VLMs as a simple yet 
+            powerful principle for scalable VLA adaptation.
           </p>
         </div>
       </div>
