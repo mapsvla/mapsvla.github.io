@@ -228,17 +228,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Real-Robot Demonstrations (Franka)</h2>
-        <p style="text-align: left;">
-          We evaluate on a Franka Emika Panda platform across four manipulation tasks,
-          comparing the baseline (MiniVLA-OFT) against <span class="dnerf">+MAPS</span>
-          in both in-distribution (ID) and out-of-distribution (OOD) settings.
+        <p style="text-align: left; font-size: 0.9rem; color: #4a4a4a;">
+          MiniVLA-OFT baseline vs. <span class="dnerf">+MAPS</span> across four tasks, in both ID and OOD settings.
         </p>
       </div>
     </div>
 
     <!-- Can -->
     <div class="task-block">
-      <h3 class="title is-4 has-text-centered">Task 1: Can</h3>
+      <p class="has-text-centered" style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: #4a4a4a;">Task 1: Can</p>
       <div class="columns is-gapless">
         <div class="column" style="padding-right: 0.5rem;">
           <p class="has-text-centered condition-header">In-Distribution</p>
@@ -281,7 +279,7 @@
 
     <!-- Block -->
     <div class="task-block">
-      <h3 class="title is-4 has-text-centered">Task 2: Block</h3>
+      <p class="has-text-centered" style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: #4a4a4a;">Task 2: Block</p>
       <div class="columns is-gapless">
         <div class="column" style="padding-right: 0.5rem;">
           <p class="has-text-centered condition-header">In-Distribution</p>
@@ -324,7 +322,7 @@
 
     <!-- Cup -->
     <div class="task-block">
-      <h3 class="title is-4 has-text-centered">Task 3: Cup</h3>
+      <p class="has-text-centered" style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: #4a4a4a;">Task 3: Cup</p>
       <div class="columns is-gapless">
         <div class="column" style="padding-right: 0.5rem;">
           <p class="has-text-centered condition-header">In-Distribution</p>
@@ -367,7 +365,7 @@
 
     <!-- Laptop -->
     <div class="task-block">
-      <h3 class="title is-4 has-text-centered">Task 4: Laptop</h3>
+      <p class="has-text-centered" style="font-weight: 600; font-size: 0.95rem; margin-bottom: 0.5rem; color: #4a4a4a;">Task 4: Laptop</p>
       <div class="columns is-gapless">
         <div class="column" style="padding-right: 0.5rem;">
           <p class="has-text-centered condition-header">In-Distribution</p>
@@ -423,16 +421,16 @@
         <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
           <img src="./static/images/franka_results.png" alt="Franka real-robot results">
         </figure>
-        <p style="margin-bottom: 2rem; color: #4a4a4a; text-align: left;">
-          <strong>Franka Emika Panda.</strong> MAPS boosts average ID success from 40% to 72.5% and OOD success from 22.5% to 52.5% across four manipulation tasks (can, block, cup, laptop), with and without distribution shift.
+        <p style="margin-bottom: 1.25rem; color: #4a4a4a; text-align: left; font-size: 0.9rem;">
+          <strong>Franka Emika Panda.</strong> MAPS boosts ID success 40%→72.5% and OOD 22.5%→52.5% across four tasks (can, block, cup, laptop).
         </p>
 
         <h3 class="title is-4">SimplerEnv</h3>
         <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
           <img src="./static/images/simpler_results.png" alt="SimplerEnv results">
         </figure>
-        <p style="margin-bottom: 2rem; color: #4a4a4a; text-align: left;">
-          <strong>SimplerEnv (BridgeData V2).</strong> MAPS matches ID performance while improving OOD generalization by up to 20% on MiniVLA-OFT, surpassing much larger pretrained baselines (RT-1-X, Octo, π₀) on out-of-distribution tasks.
+        <p style="margin-bottom: 1.25rem; color: #4a4a4a; text-align: left; font-size: 0.9rem;">
+          <strong>SimplerEnv (BridgeData V2).</strong> MAPS matches ID performance while improving OOD generalization by up to 20% on MiniVLA-OFT, surpassing RT-1-X, Octo, and π₀ on OOD tasks.
         </p>
 
         <h3 class="title is-4">CALVIN ABC→D and LIBERO</h3>
@@ -448,9 +446,9 @@
             </figure>
           </div>
         </div>
-        <p style="margin-bottom: 2rem; color: #4a4a4a; text-align: left;">
-          <strong>CALVIN ABC→D.</strong> MAPS improves average sequence length by +0.7 on MiniVLA-OFT and +0.1 on OpenVLA-OFT, with the largest gains at longer task horizons.
-          &nbsp;&nbsp;<strong>LIBERO.</strong> Trained only on LIBERO-90 with no external VLA pretraining, MAPS delivers consistent OOD gains of 1–10% across all four backbones on unseen spatial, object, goal, and long-horizon splits.
+        <p style="margin-bottom: 1.25rem; color: #4a4a4a; text-align: left; font-size: 0.9rem;">
+          <strong>CALVIN ABC→D.</strong> MAPS improves average sequence length by +0.7 (MiniVLA-OFT) / +0.1 (OpenVLA-OFT).
+          &nbsp;&nbsp;<strong>LIBERO.</strong> With no external VLA pretraining, MAPS delivers consistent OOD gains of 1–10% across all four backbones on unseen task splits.
         </p>
 
       </div>
