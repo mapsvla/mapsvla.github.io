@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Module-Wise Proximity Scheduling for Better Vision-Language-Action Generalization">
-  <meta name="keywords" content="VLA, robot learning, vision language action, fine-tuning, generalization, MAPS">
+  <meta name="keywords" content="VLA, robot learning, vision language action, fine-tuning, generalization, MAPS, CVPR 2026">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MAPS: Preserving Vision-Language Representations via Module-Wise Proximity Scheduling for Better Vision-Language-Action Generalization</title>
 
@@ -12,25 +12,17 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,9 +30,28 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <style>
+    .video-label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: #363636;
+    }
+    .condition-label {
+      font-size: 0.85rem;
+      color: #7a7a7a;
+      text-align: center;
+      margin-bottom: 0.3rem;
+    }
+    .task-block {
+      margin-bottom: 2.5rem;
+    }
+  </style>
 </head>
 <body>
 
+<!-- Hero / Title -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -48,19 +59,11 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">MAPS: Preserving Vision-Language Representations via Module-Wise Proximity Scheduling for Better Vision-Language-Action Generalization</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://chengyuehuang511.github.io/">Chengyue Huang</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://meilongzhang.github.io/">Mellon M. Zhang</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/rbazarcon/">Robert Azarcon</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://glenchou.github.io/">Glen Chou</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira</a>
-            </span>
+            <span class="author-block"><a href="https://chengyuehuang511.github.io/">Chengyue Huang</a><sup>*</sup>,</span>
+            <span class="author-block"><a href="https://meilongzhang.github.io/">Mellon M. Zhang</a><sup>*</sup>,</span>
+            <span class="author-block"><a href="https://www.linkedin.com/in/rbazarcon/">Robert Azarcon</a>,</span>
+            <span class="author-block"><a href="https://glenchou.github.io/">Glen Chou</a>,</span>
+            <span class="author-block"><a href="https://faculty.cc.gatech.edu/~zk15/">Zsolt Kira</a></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -71,47 +74,31 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2511.19878"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
+                <a href="https://arxiv.org/pdf/2511.19878" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2511.19878"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
+                <a href="https://arxiv.org/abs/2511.19878" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/chengyuehuang511/MAPS-VLA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
+                <a href="https://github.com/chengyuehuang511/MAPS-VLA" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
-              <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/hcy511"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <img src="static/images/hf_icon.svg" />
-                  </span>
+                <a href="https://huggingface.co/hcy511" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><img src="static/images/hf_icon.svg" /></span>
                   <span>Data</span>
-                  </a>
+                </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -119,69 +106,289 @@
   </div>
 </section>
 
+<!-- Teaser Figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <figure class="image has-text-centered">
         <img src="./static/images/maps.png" alt="MAPS Framework">
       </figure>
-
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MAPS</span> linearly relaxes module-wise proximity constraints to pretrained VLMs, preserving vision-language representations while adapting action-oriented layers for better generalization in VLAs.
+        <span class="dnerf">MAPS</span> linearly relaxes module-wise proximity constraints to pretrained VLMs,
+        preserving vision-language representations while adapting action-oriented layers for better generalization in VLAs.
       </h2>
     </div>
   </div>
 </section>
 
 
+<!-- Abstract -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Vision-Language-Action (VLA) models inherit strong priors from
-            pretrained Vision-Language Models (VLMs), but naïve
-            fine-tuning often disrupts these representations
-            and harms generalization.
-            Existing fixes -- freezing modules or applying
-            uniform regularization -- either overconstrain
-            adaptation or ignore the differing roles of
-            VLA components.
+            Vision-Language-Action (VLA) models inherit strong priors from pretrained Vision-Language Models (VLMs),
+            but naïve fine-tuning often disrupts these representations and harms generalization. Existing fixes —
+            freezing modules or applying uniform regularization — either overconstrain adaptation or ignore the
+            differing roles of VLA components.
           </p>
           <p>
-            We present <span class="dnerf">MAPS</span> (Module-Wise Proximity Scheduling),
-            the first robust fine-tuning framework for VLAs.
-            Through systematic analysis, we uncover an empirical
-            order in which proximity constraints should be relaxed to
-            balance stability and flexibility.
-            MAPS linearly schedules this relaxation, enabling visual
-            encoders to stay close to their pretrained priors
-            while action-oriented language layers adapt more freely.
-            MAPS introduces no additional parameters or data, and can
-            be seamlessly integrated into existing VLAs.
+            We present <span class="dnerf">MAPS</span> (Module-Wise Proximity Scheduling), the first robust
+            fine-tuning framework for VLAs. Through systematic analysis, we uncover an empirical order in which
+            proximity constraints should be relaxed to balance stability and flexibility. MAPS linearly schedules
+            this relaxation, enabling visual encoders to stay close to their pretrained priors while action-oriented
+            language layers adapt more freely. MAPS introduces no additional parameters or data, and can be
+            seamlessly integrated into existing VLAs.
           </p>
           <p>
-            Across MiniVLA-VQ, MiniVLA-OFT, OpenVLA-OFT, and
-            challenging benchmarks such as SimplerEnv, CALVIN,
-            LIBERO, as well as real-world evaluations on the
-            Franka Emika Panda platform, MAPS consistently
-            boosts both in-distribution and out-of-distribution
-            performance (up to +30%). Our findings highlight
-            empirically guided proximity to pretrained VLMs as
-            a simple yet powerful principle for preserving broad
+            Across MiniVLA-VQ, MiniVLA-OFT, OpenVLA-OFT, and challenging benchmarks such as SimplerEnv, CALVIN,
+            LIBERO, as well as real-world evaluations on the Franka Emika Panda platform, MAPS consistently boosts
+            both in-distribution and out-of-distribution performance (up to +30%). Our findings highlight empirically
+            guided proximity to pretrained VLMs as a simple yet powerful principle for preserving broad
             generalization in VLM-to-VLA transfer.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
   </div>
 </section>
 
 
+<!-- Method -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">The MAPS Framework</h2>
+      </div>
+    </div>
+
+    <div class="content has-text-justified">
+      <h3 class="title is-4">Motivation: Why does naive fine-tuning fail?</h3>
+      <p>
+        VLA models initialize from powerful VLMs pretrained on web-scale data, leveraging their rich visual and
+        semantic priors before fine-tuning on robotics datasets to learn action policies. However, fine-tuning on
+        sparse, task-specific robot data induces spurious correlations and overfitting, causing catastrophic
+        forgetting of spatial reasoning, world knowledge, and linguistic grounding. The core challenge is
+        <em>balancing the tradeoff between action adaptation and preservation of pretrained generalization</em>.
+      </p>
+      <p>
+        Freezing visual encoders preserves pretrained perception but limits adaptation. Uniform regularization
+        constrains all layers equally, ignoring the fact that different components encode distinct priors and
+        vary in their sensitivity to fine-tuning. Some modules must stay near their pretrained state to preserve
+        structural knowledge; others require greater flexibility to adapt task-specific grounding.
+      </p>
+
+      <h3 class="title is-4">A Module Hierarchy for VLAs</h3>
+      <p>
+        Through systematic analysis of freezing configurations across DINOv2, SigLIP, early language layers, and
+        late language layers, we identify an empirical hierarchy of how much each component should be preserved:
+      </p>
+      <p style="text-align: center; font-size: 1.1rem; padding: 0.8rem 0;">
+        <strong>DINOv2 &gt; SigLIP &gt; Early Language &gt; Late Language</strong>
+      </p>
+      <p>
+        DINOv2 contributes essential depth perception and geometric priors for manipulation. SigLIP provides
+        strong vision-language alignment. Late language layers drive task performance and benefit from more
+        aggressive adaptation to the action space. Freezing any single component in isolation introduces
+        task-dependent inductive biases that degrade performance across benchmarks — <em>freezing alone is not
+        a reliable path to generalization</em>.
+      </p>
+
+      <h3 class="title is-4">Module-Wise Proximity Scheduling (MAPS)</h3>
+      <p>
+        MAPS extends projection-based selective tuning (SPD) by replacing its global proximity hyperparameter
+        with a <em>layer-wise, architecture-aware linear schedule</em>. Let the ordered stack of model
+        submodules be DINOv2 → SigLIP → Bridge → Language. For layer index <em>k</em>, MAPS assigns a
+        proximity weight:
+      </p>
+      <p style="text-align: center; font-size: 1.05rem; padding: 0.5rem 0;">
+        λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1) / (|L|−1))
+      </p>
+      <p>
+        This yields a smooth linear decay from λ<sub>max</sub> for early visual layers to 0 for the deepest
+        language layers. Modules initialized from scratch (action head, proprioceptive projector) are assigned
+        λ = 0 and undergo full fine-tuning, since they have no pretrained parameters to preserve.
+      </p>
+      <p>
+        During optimization, whenever a gradient update is inconsistent with preserving pretrained structure
+        (i.e., the gradient pushes parameters away from their pretrained initialization), MAPS applies a
+        layer-specific projection back toward the pretrained weights. The result: visual layers remain strongly
+        anchored to pretrained perceptual representations, while deeper language layers adapt flexibly to
+        task-level semantics.
+      </p>
+      <p>
+        MAPS is <strong>lightweight and plug-and-play</strong> — it introduces no additional parameters,
+        requires no auxiliary networks or extra data, and integrates seamlessly with existing VLA architectures
+        via three training flags.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Franka Video Comparisons -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Real-Robot Demonstrations (Franka)</h2>
+        <p class="subtitle">
+          We evaluate on a Franka Emika Panda platform across four manipulation tasks,
+          comparing the baseline (MiniVLA-OFT) against <span class="dnerf">+MAPS</span>
+          in both in-distribution (ID) and out-of-distribution (OOD) settings.
+        </p>
+      </div>
+    </div>
+
+    <!-- Can -->
+    <div class="task-block">
+      <h3 class="title is-4 has-text-centered">Task 1: Can</h3>
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_1_can_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_1_can_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_2_can_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_2_can_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block -->
+    <div class="task-block">
+      <h3 class="title is-4 has-text-centered">Task 2: Block</h3>
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_3_block_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_3_block_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_4_block_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_4_block_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cup -->
+    <div class="task-block">
+      <h3 class="title is-4 has-text-centered">Task 3: Cup</h3>
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_5_cup_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_5_cup_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_6_cup_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_6_cup_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laptop -->
+    <div class="task-block">
+      <h3 class="title is-4 has-text-centered">Task 4: Laptop</h3>
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_7_laptop_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">In-Distribution (ID)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_7_laptop_id.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">Baseline</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/baseline_8_laptop_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="column">
+          <p class="condition-label">Out-of-Distribution (OOD)</p>
+          <p class="video-label has-text-centered">+ MAPS (Ours)</p>
+          <video autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/maps_8_laptop_ood.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Results -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -218,6 +425,7 @@
 </section>
 
 
+<!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
