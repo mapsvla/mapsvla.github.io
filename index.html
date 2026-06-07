@@ -128,7 +128,7 @@
 <!-- Animation -->
 <section class="section" style="padding-bottom: 0;">
   <div class="container is-max-desktop">
-    <video autoplay muted loop playsinline width="100%">
+    <video autoplay muted loop playsinline preload="none" width="100%">
       <source src="./static/videos/animation.mp4" type="video/mp4">
     </video>
   </div>
@@ -161,10 +161,10 @@
 
       <!-- Preliminary figures -->
       <figure class="image" style="margin-top: 1rem; margin-bottom: 0.5rem;">
-        <img src="./static/images/simpler_prim.png" alt="SimplerEnv preliminary results">
+        <img src="./static/images/simpler_prim.webp" alt="SimplerEnv preliminary results">
       </figure>
       <figure class="image" style="margin-bottom: 1.5rem; width: 90%; margin-left: auto; margin-right: auto;">
-        <img src="./static/images/libero_l2_combined.png" alt="LIBERO preliminary results and L2 distance from pretrained weights">
+        <img src="./static/images/libero_l2_combined.webp" alt="LIBERO preliminary results and L2 distance from pretrained weights">
       </figure>
 
       <h3 class="title is-4">A Module Hierarchy for VLAs</h3>
@@ -185,7 +185,7 @@
 
       <h3 class="title is-4">Module-Wise Proximity Scheduling (MAPS)</h3>
       <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
-        <img src="./static/images/maps.png" alt="MAPS Framework">
+        <img src="./static/images/maps.webp" alt="MAPS Framework">
       </figure>
       <p style="text-align: left;">
         MAPS assigns a linearly decaying proximity weight λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1)/(|L|−1))
@@ -221,13 +221,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_1_can_id.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_1_can_id.mp4" type="video/mp4">
               </video>
             </div>
@@ -239,13 +239,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_2_can_ood.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_2_can_ood.mp4" type="video/mp4">
               </video>
             </div>
@@ -264,13 +264,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_3_block_id.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_3_block_id.mp4" type="video/mp4">
               </video>
             </div>
@@ -282,13 +282,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_4_block_ood.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_4_block_ood.mp4" type="video/mp4">
               </video>
             </div>
@@ -307,13 +307,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_5_cup_id.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_5_cup_id.mp4" type="video/mp4">
               </video>
             </div>
@@ -325,13 +325,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_6_cup_ood.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_6_cup_ood.mp4" type="video/mp4">
               </video>
             </div>
@@ -350,13 +350,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_7_laptop_id.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_7_laptop_id.mp4" type="video/mp4">
               </video>
             </div>
@@ -368,13 +368,13 @@
           <div class="columns is-mobile is-gapless">
             <div class="column has-text-centered" style="padding-right:0.25rem;">
               <p class="video-label">Baseline</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/baseline_8_laptop_ood.mp4" type="video/mp4">
               </video>
             </div>
             <div class="column has-text-centered" style="padding-left:0.25rem;">
               <p class="video-label">+ MAPS (Ours)</p>
-              <video autoplay muted loop playsinline width="100%">
+              <video autoplay muted loop playsinline preload="none" width="100%">
                 <source src="./static/videos/maps_8_laptop_ood.mp4" type="video/mp4">
               </video>
             </div>
@@ -396,7 +396,7 @@
 
         <h3 class="title is-4">Real Robot (Franka)</h3>
         <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
-          <img src="./static/images/franka_results.png" alt="Franka real-robot results">
+          <img loading="lazy" src="./static/images/franka_results.webp" alt="Franka real-robot results">
         </figure>
         <p style="margin-bottom: 1.25rem; color: #4a4a4a; text-align: left;">
           <strong>Franka Emika Panda.</strong> MAPS boosts ID success 40%→72.5% and OOD 22.5%→52.5% across four tasks (can, block, cup, laptop).
@@ -404,7 +404,7 @@
 
         <h3 class="title is-4">SimplerEnv</h3>
         <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
-          <img src="./static/images/simpler_results.png" alt="SimplerEnv results">
+          <img loading="lazy" src="./static/images/simpler_results.webp" alt="SimplerEnv results">
         </figure>
         <p style="margin-bottom: 1.25rem; color: #4a4a4a; text-align: left;">
           <strong>SimplerEnv (BridgeData V2).</strong> MAPS matches ID performance while improving OOD generalization by up to 20% on MiniVLA-OFT, surpassing RT-1-X, Octo, and π₀ on OOD tasks.
@@ -414,12 +414,12 @@
         <div class="columns is-centered" style="margin-bottom: 0.75rem;">
           <div class="column is-narrow">
             <figure class="image">
-              <img src="./static/images/calvin_results.png" alt="CALVIN results" style="max-width: 400px;">
+              <img loading="lazy" src="./static/images/calvin_results.webp" alt="CALVIN results" style="max-width: 400px;">
             </figure>
           </div>
           <div class="column is-narrow">
             <figure class="image">
-              <img src="./static/images/libero_results.png" alt="LIBERO results" style="max-width: 400px;">
+              <img loading="lazy" src="./static/images/libero_results.webp" alt="LIBERO results" style="max-width: 400px;">
             </figure>
           </div>
         </div>
