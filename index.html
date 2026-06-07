@@ -188,34 +188,15 @@
       </p>
 
       <h3 class="title is-4">Module-Wise Proximity Scheduling (MAPS)</h3>
-      <figure class="image has-text-centered" style="margin-bottom: 1.5rem;">
+      <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
         <img src="./static/images/maps.png" alt="MAPS Framework">
       </figure>
-      <p>
-        MAPS extends projection-based selective tuning (SPD) by replacing its global proximity hyperparameter
-        with a <em>layer-wise, architecture-aware linear schedule</em>. Let the ordered stack of model
-        submodules be DINOv2 → SigLIP → Bridge → Language. For layer index <em>k</em>, MAPS assigns a
-        proximity weight:
-      </p>
-      <p style="text-align: center; font-size: 1.05rem; padding: 0.5rem 0;">
-        λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1) / (|L|−1))
-      </p>
-      <p>
-        This yields a smooth linear decay from λ<sub>max</sub> for early visual layers to 0 for the deepest
-        language layers. Modules initialized from scratch (action head, proprioceptive projector) are assigned
-        λ = 0 and undergo full fine-tuning, since they have no pretrained parameters to preserve.
-      </p>
-      <p>
-        During optimization, whenever a gradient update is inconsistent with preserving pretrained structure
-        (i.e., the gradient pushes parameters away from their pretrained initialization), MAPS applies a
-        layer-specific projection back toward the pretrained weights. The result: visual layers remain strongly
-        anchored to pretrained perceptual representations, while deeper language layers adapt flexibly to
-        task-level semantics.
-      </p>
-      <p>
-        MAPS is <strong>lightweight and plug-and-play</strong> — it introduces no additional parameters,
-        requires no auxiliary networks or extra data, and integrates seamlessly with existing VLA architectures
-        via three training flags.
+      <p style="font-size: 0.9rem; color: #4a4a4a; text-align: left;">
+        MAPS assigns a linearly decaying proximity weight λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1)/(|L|−1))
+        to each module — strongest for early visual layers (DINOv2, SigLIP) and zero for the deepest language
+        layers — anchoring pretrained perception while allowing task-level semantics to adapt freely.
+        Modules with no pretrained parameters (action head, proprioceptive projector) are assigned λ = 0 and
+        undergo full fine-tuning.
       </p>
     </div>
   </div>
