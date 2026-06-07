@@ -194,7 +194,7 @@
       <p style="text-align: left;">
         MAPS assigns a linearly decaying proximity weight λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1)/(|L|−1))
         to each module — strongest for early visual layers (DINOv2, SigLIP) and weakest for the deepest language
-        layers — anchoring pretrained perception while allowing task-level semantics to adapt freely.
+        layers — anchoring pretrained perception while action-oriented language layers adapt more freely.
         Modules with no pretrained parameters (action head, proprioceptive projector) are assigned λ = 0 and
         undergo full fine-tuning.
       </p>
