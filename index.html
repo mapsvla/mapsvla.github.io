@@ -106,20 +106,6 @@
   </div>
 </section>
 
-<!-- Teaser Figure -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <figure class="image has-text-centered">
-        <img src="./static/images/maps.png" alt="MAPS Framework">
-      </figure>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">MAPS</span> linearly relaxes module-wise proximity constraints to pretrained VLMs,
-        preserving vision-language representations while adapting action-oriented layers for better generalization in VLAs.
-      </h2>
-    </div>
-  </div>
-</section>
 
 
 
@@ -165,6 +151,9 @@
       </p>
 
       <h3 class="title is-4">Module-Wise Proximity Scheduling (MAPS)</h3>
+      <figure class="image has-text-centered" style="margin-bottom: 1.5rem;">
+        <img src="./static/images/maps.png" alt="MAPS Framework">
+      </figure>
       <p>
         MAPS extends projection-based selective tuning (SPD) by replacing its global proximity hyperparameter
         with a <em>layer-wise, architecture-aware linear schedule</em>. Let the ordered stack of model
