@@ -30,6 +30,10 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script>
+    MathJax = { tex: { inlineMath: [['$', '$']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
 
   <style>
     .video-label {
@@ -190,10 +194,10 @@
         <img src="./static/images/maps.webp" alt="MAPS Framework">
       </figure>
       <p style="text-align: left;">
-        MAPS assigns a linearly decaying proximity weight λ<sub>k</sub> = λ<sub>max</sub> · (1 − (k−1)/(|L|−1))
+        MAPS assigns a linearly decaying proximity weight $\lambda_k = \lambda_{\max} \cdot \left(1 - \frac{k-1}{|L|-1}\right)$
         to each module — strongest for early visual layers (DINOv2, SigLIP) and weakest for the deepest language
         layers — anchoring pretrained perception while action-oriented language layers adapt more freely.
-        Modules with no pretrained parameters (action head, proprioceptive projector) are assigned λ = 0 and
+        Modules with no pretrained parameters (action head, proprioceptive projector) are assigned $\lambda = 0$ and
         undergo full fine-tuning.
       </p>
     </div>
