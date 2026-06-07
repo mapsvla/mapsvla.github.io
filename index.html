@@ -396,17 +396,23 @@
         <h2 class="title is-3">Results</h2>
 
         <h3 class="title is-4">Real Robot (Franka)</h3>
-        <figure class="image has-text-centered" style="margin-bottom: 2rem;">
+        <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
           <img src="./static/images/franka_results.png" alt="Franka real-robot results">
         </figure>
+        <p class="has-text-centered" style="margin-bottom: 2rem; color: #4a4a4a;">
+          <strong>Franka Emika Panda.</strong> MAPS boosts average ID success from 40% to 72.5% and OOD success from 22.5% to 52.5% across four manipulation tasks (can, block, cup, laptop), with and without distribution shift.
+        </p>
 
         <h3 class="title is-4">SimplerEnv</h3>
-        <figure class="image has-text-centered" style="margin-bottom: 2rem;">
+        <figure class="image has-text-centered" style="margin-bottom: 0.75rem;">
           <img src="./static/images/simpler_results.png" alt="SimplerEnv results">
         </figure>
+        <p class="has-text-centered" style="margin-bottom: 2rem; color: #4a4a4a;">
+          <strong>SimplerEnv (BridgeData V2).</strong> MAPS matches ID performance while improving OOD generalization by up to 20% on MiniVLA-OFT, surpassing much larger pretrained baselines (RT-1-X, Octo, π₀) on out-of-distribution tasks.
+        </p>
 
         <h3 class="title is-4">CALVIN ABC→D and LIBERO</h3>
-        <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="columns is-centered" style="margin-bottom: 0.75rem;">
           <div class="column is-narrow">
             <figure class="image">
               <img src="./static/images/calvin_results.png" alt="CALVIN results" style="max-width: 400px;">
@@ -418,6 +424,10 @@
             </figure>
           </div>
         </div>
+        <p class="has-text-centered" style="margin-bottom: 2rem; color: #4a4a4a;">
+          <strong>CALVIN ABC→D.</strong> MAPS improves average sequence length by +0.7 on MiniVLA-OFT and +0.1 on OpenVLA-OFT, with the largest gains at longer task horizons.
+          &nbsp;&nbsp;<strong>LIBERO.</strong> Trained only on LIBERO-90 with no external pretraining, MAPS delivers consistent OOD gains of 1–10% across all four backbones on unseen spatial, object, goal, and long-horizon splits.
+        </p>
 
       </div>
     </div>
